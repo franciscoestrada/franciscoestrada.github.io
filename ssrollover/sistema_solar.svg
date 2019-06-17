@@ -1,0 +1,86 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:2.000000e-02;fill:#FFFFFF;}
+	.st1{stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st2{fill:#999999;}
+	.st3{font-family:'Arial-BoldMT';}
+	.st4{font-size:24px;}
+	.st5{font-size:14px;}
+    
+    #infomercurio{
+    display: none;
+    }
+    #infovenus{
+    display: none;
+    }
+</style>
+<g id="fondo">
+	
+		<image style="overflow:visible;" width="2928" height="1647" xlink:href="planetas/SistemaSolar.jpg"  transform="matrix(0.3279 0 0 0.3414 0 -2.3478)">
+	</image>
+</g>
+<g id="botones">
+	<circle id="mercurio" class="st0" cx="44.5" cy="511.5" r="4.5"/>
+	<circle id="venus" class="st0" cx="75" cy="505" r="9"/>
+	<circle id="tierra" class="st0" cx="111" cy="505" r="10"/>
+	<circle id="marte" class="st0" cx="147.5" cy="509.5" r="5.5"/>
+	<circle id="jupiter" class="st0" cx="290.5" cy="407.5" r="101.5"/>
+	<circle id="saturno" class="st0" cx="565.5" cy="423.5" r="83.5"/>
+	<circle id="urano" class="st0" cx="713.5" cy="473.5" r="37.5"/>
+	<circle id="neptuno" class="st0" cx="816" cy="474" r="36"/>
+</g>
+<g id="infomercurio">
+	<path class="st1" d="M320,259H84L46,499l21-240H44c-6.6,0-12-5.4-12-12V124c0-6.6,5.4-12,12-12h276c6.6,0,12,5.4,12,12v123
+		C332,253.6,326.6,259,320,259z"/>
+	
+		<image style="overflow:visible;" width="150" height="150" xlink:href="planetas/mercurio.png"  transform="matrix(0.7333 0 0 0.7333 44 129)">
+	</image>
+	<text transform="matrix(1 0 0 1 177 144)"><tspan x="0" y="0" class="st2 st3 st4">Mercurio</tspan><tspan x="0" y="33.6" class="st2 st3 st5">Diámetro: 4.880 km.</tspan></text>
+</g>
+<g id="infovenus">
+	<path class="st1" d="M350,248H114L76,488l21-240H74c-6.6,0-12-5.4-12-12V113c0-6.6,5.4-12,12-12h276c6.6,0,12,5.4,12,12v123
+		C362,242.6,356.6,248,350,248z"/>
+	<text transform="matrix(1 0 0 1 207 133)"><tspan x="0" y="0" class="st2 st3 st4">Venus</tspan><tspan x="0" y="33.6" class="st2 st3 st5">Diámetro: 8,000 km.</tspan></text>
+	<image style="overflow:visible;" width="320" height="240" xlink:href="planetas/venus.gif"  transform="matrix(0.3125 0 0 0.3125 80 123)">
+	</image>
+</g>
+<!--    Animación de Mercurio -->
+    <animate 
+    xlink:href="#infomercurio"
+     fill="freeze" 
+     dur="0.2s" 
+     begin="mercurio.mouseover"
+      attributeName="display"
+      from="none" 
+      to="block" 
+      />
+<animate 
+    xlink:href="#infomercurio"
+     fill="freeze" 
+     dur="0.5s" 
+     begin="mercurio.mouseout"
+      attributeName="display"
+      from="block" 
+      to="none" 
+      />   
+<!--    Animación de Venus-->
+    <animate 
+    xlink:href="#infovenus"
+     fill="freeze" 
+     dur="0.2s" 
+     begin="venus.mouseover"
+      attributeName="display"
+      from="none" 
+      to="block" 
+      />
+<animate 
+    xlink:href="#infovenus"
+     fill="freeze" 
+     dur="0.5s" 
+     begin="venus.mouseout"
+      attributeName="display"
+      from="block" 
+      to="none" 
+      />   
+</svg>
