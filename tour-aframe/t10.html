@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tour A-Frame</title>
+   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="a1" src="imagen/city_render.jpg" />
+      <img id="b1" src="imagen/1b.jpg" />
+      <img id="a2" src="imagen/2.jpg" />
+      <img id="b2" src="imagen/2b.jpg" />
+      <img id="a3" src="imagen/3.jpg" />
+      <img id="b3" src="imagen/3b.jpg" />
+    </a-assets>
+    <a-image src="#b1" position="-1 1 -10" onclick="show('a1')" 
+    animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 300; startEvents: mouseenter"
+  animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-image>
+   
+    <a-image src="#b2" position="0 1 -10" onclick="show('a2')" animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 300; startEvents: mouseenter"
+  animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-image>></a-image>
+   
+    <a-image src="#b3" position="1 1 -10" onclick="show('a3')" animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 300; startEvents: mouseenter"
+  animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-image>></a-image>
+   
+    <a-sky src="#a1" id="sky"></a-sky>
+    
+    <a-camera>
+      <a-cursor color="white"></a-cursor>
+    </a-camera>
+  </a-scene>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recorrido virtual con A-Frame</title>
+   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="tour1" src="imagen/casa.jpg" />
+      <img id="b1" src="imagen/casa-b.jpg" />
+      <img id="tour2" src="imagen/calle.jpg" />
+      <img id="b2" src="imagen/calle-b.jpg" />
+      <img id="tour3" src="imagen/concierto.jpg" />
+      <img id="b3" src="imagen/concierto-b.jpg" />
+    </a-assets>
+    <a-image src="#b1" position="1 1.5 -5" onclick="show('tour1')"></a-image>  
+    <a-image src="#b2" position="2.5 1.5 -5" onclick="show('tour2')"></a-image>> 
+    <a-image src="#b3" position="4 1.5 -5" onclick="show('tour3')"></a-image>>
+   
+    <a-sky src="#tour1" id="sky"></a-sky>
+    
+    <a-camera>
+      <a-cursor color="white"></a-cursor>
+    </a-camera>
+  </a-scene>
+  <script src="js/index.js"></script>
+</body>
+</html>
