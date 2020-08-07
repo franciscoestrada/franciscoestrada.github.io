@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Academia de San Carlos</title>
+    <script src='https://www.x3dom.org/x3dom/release/x3dom-full.js'></script>
+    <link rel='stylesheet' href='https://www.x3dom.org/x3dom/release/x3dom.css'>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        .fondo {
+            width: 100vw;
+            height: 100vh;
+            /*background: #000;*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <X3D class="fondo">
+        <Scene>
+
+            <navigationInfo type='"walk" "any"'></navigationInfo>
+
+<!-- Los puntos de vista. Oprimiendo Shift+AvPag o Shift+RePag se viaja a los diferentes puntos de vista -->
+
+<Viewpoint position="9 -4 38" orientation="0.94 -0.350 -0 0.080" centerOfRotation="0.00000 0.00000 0.00000" fieldOfView="0.78540" description="Entrada"></Viewpoint>
+
+<Viewpoint position="1 -4.7 -9.7" orientation="0 -1.0 0.0 1.39" description="Patio"></Viewpoint>
+
+<Viewpoint position="3.89743 -3.64060 -13.12929" orientation="0.03015 0.99900 0.03314 0.65777" description="Puerta"></Viewpoint>
+
+ <Viewpoint position="19.92449 49.89775 -17.68060" orientation="-0.05762 0.79929 0.59817 2.80584" 
+	description="vistaAerea"></Viewpoint>          
+
+           
+<!-- La planta baja    -->
+            <Transform DEF='plantaBaja' scale='2.5,2.5,2.5'>
+                <Transform DEF='Fila'>
+                    <inline DEF="Arco" url="2020-arcok.x3d"></inline>
+
+                    <Transform translation='1.70 0 0'>
+                        <Shape USE='Arco' />
+                    </Transform>
+
+                    <Transform translation='3.4 0 0'>
+                        <Shape USE='Arco' />
+                    </Transform>
+
+                    <Transform translation='5.10 0 0'>
+                        <Shape USE='Arco' />
+                    </Transform>
+                    <Transform translation='6.8 0 0'>
+                        <Shape USE='Arco' />
+                    </Transform>
+                    <Transform translation='8.50 0 0'>
+                        <Shape USE='Arco' />
+                    </Transform>
+                </Transform>
+
+                <Transform rotation='0 1 0 1.57' translation='1.05 0 1.05'>
+                    <Transform USE='Fila' />
+                </Transform>
+
+                <Transform rotation='0 1 0 -1.57' translation='7.8 0 -1.05'>
+                    <Transform USE='Fila' />
+                </Transform>
+
+                <Transform rotation='0 1 0 1.57' translation='7.8 0 7.8'>
+                    <Transform USE='Fila' />
+                </Transform>
+            </Transform>
+
+<!--La planta alta es una copia del nodo transform DEF="plantaBaja", agregándole un atributo translation para ubicarlo arriba del grupo original. La DEF de Fila se cambia a Fila2  -->
+            
+            <Transform DEF="primerPiso" translation="0 -2.55 6.8">
+                <Transform DEF='Fila2'>
+                    <shape USE="Arco"></shape>
+
+                    <Transform translation='1.70 0 0'>
+                        <Shape USE='Arco' />
+                    </Transform>
+
+                    <Transform translation='3.4 0 0'>
+                        <Shape USE='Arco' />
+                    </Transform>
+
+                    <Transform translation='5.10 0 0'>
+                        <Shape USE='Arco' />
+                    </Transform>
+                    <Transform translation='6.8 0 0'>
+                        <Shape USE='Arco' />
+                    </Transform>
+                    <Transform translation='8.50 0 0'>
+                        <Shape USE='Arco' />
+                    </Transform>
+                </Transform>
+
+                <Transform rotation='0 1 0 1.57' translation='1.05 0 1.05'>
+                    <Transform USE='Fila2' />
+                </Transform>
+
+                <Transform rotation='0 1 0 -1.57' translation='7.8 0 -1.05'>
+                    <Transform USE='Fila2' />
+                </Transform>
+
+                <Transform rotation='0 1 0 1.57' translation='7.8 0 7.8'>
+                    <Transform USE='Fila2' />
+                </Transform>
+            </Transform>
+
+<!-- El piso  -->
+            <Transform translation='5 0 5'>
+                <Shape>
+                    <Appearance>
+                        <ImageTexture url='img/piso.jpg'></ImageTexture>
+                        <TextureTransform center='0,0' metadata='X3DMetadataObject' rotation='0' scale='20,20' translation='0,0'></TextureTransform>
+                    </Appearance>
+                    <Box size='40 0.05 40' />
+                </Shape>
+            </Transform>
+
+<!-- La textura del patio central -->
+
+            <Transform translation='4.36 0 3.36'>
+                <Shape>
+                    <Appearance>
+                        <ImageTexture url='img/piso_gris.jpg'></ImageTexture>
+                        <TextureTransform center='0,0' metadata='X3DMetadataObject' rotation='0' scale='8,8' translation='0,0'></TextureTransform>
+                    </Appearance>
+                    <Box size='6 0.07 6' />
+                </Shape>
+            </Transform>
+
+<!-- Puertas -->
+<transform DEF='grupoPuertas'>
+<transform translation='-0.45 1 -1' rotation='0 1 0 1.57'>
+    <shape DEF='puerta'>
+        <appearance>
+            <ImageTexture url='img/puerta.png'></ImageTexture>
+        </appearance>
+        <Plane size='1.5,2'></Plane>
+    </shape>
+</transform>
+
+<transform translation='-0.45 3.5 -1' rotation='0 1 0 1.57'>
+    <shape USE='puerta'></shape>
+</transform>
+
+<transform translation='-0.45 3.5 4.2' rotation='0 1 0 1.57'>
+    <shape USE='puerta'></shape>
+</transform>
+
+<transform translation='9.3 1 -1' rotation='0 1 0 -1.57'>
+    <shape USE='puerta'>
+    </shape>
+</transform>
+
+<transform translation='9.3 3.5 -1' rotation='0 1 0 -1.57'>
+    <shape USE='puerta'>
+    </shape>
+</transform>
+
+<transform translation='9.3 3.5 4.2' rotation='0 1 0 -1.57'>
+    <shape USE='puerta'>
+    </shape>
+</transform>
+
+<transform translation='5.3 1 -1.89'>
+    <shape USE='puerta'></shape>
+</transform>
+
+<transform translation='5.3 3.5 -1.89'>
+    <shape USE='puerta'></shape>
+</transform>
+
+<transform translation='8.6 3.5 8.6' rotation='0 1 0 3.1416'>
+    <shape USE='puerta'></shape>
+</transform>
+</transform>
+<!-- Las paredes -->
+ <transform DEF='grupoParedes'>          
+            <Transform scale="2.77 2.4 2" translation='4.45 0 10'>
+                <inline DEF="facha" url="fachada.x3d"></inline>
+            </Transform>
+
+            <transform translation='-1.96 2.8 3.35'>
+                <shape DEF='pared'>
+                    <appearance>
+                        <Material ambientIntensity='0' diffuseColor='0.3 0 0' shininess='0.199' specularColor='0.173 0.164 0.154' transparency='0' />
+                    </appearance>
+                    <box size='3 6.5 10.5' />
+                </shape>
+            </transform>
+
+            <transform translation='10.835 2.8 3.35'>
+                <shape USE='pared'></shape>
+            </transform>
+
+            <transform translation='4.5 2.8 -3.4' scale='1 1 1.5' rotation='0 1 0 1.571'>
+                <shape USE='pared'></shape>
+            </transform>
+</transform> 
+<!-- El corredor -->
+<transform DEF='grupoCorredor'>
+          <transform DEF='corredor'>
+          <transform translation='2.6 2.5 -0.9'>
+              <shape DEF='pisoRojo'>
+                  <appearance>
+                      <ImageTexture url='"img/piso_rojo.jpg"'></ImageTexture>
+                        <TextureTransform metadata='X3DMetadataObject' scale='6,1.5'></TextureTransform>
+                  </appearance>
+                  <box size='10 0.1 2' />
+              </shape>
+          </transform>
+          
+          <transform translation='4.6 2.5 7.6'>
+              <shape USE='pisoRojo'></shape>
+          </transform>
+          
+          <transform translation='0.2 2.5 5' rotation='0 1 0 1.571'>
+              <shape USE='pisoRojo'></shape>
+          </transform>
+          
+           <transform translation='8.6 2.5 2' rotation='0 1 0 1.571'>
+              <shape USE='pisoRojo'></shape>
+          </transform> 
+           </transform>
+ </transform> 
+<!-- La copia superior del corredor          -->
+           <transform translation='0 2.6 0'>
+             <transform USE='corredor'></transform>  
+           </transform>
+           
+<!-- Los colores del fondo -->
+            <Background skyColor='0.21 0.18 0.66,
+		  0.2 0.44 0.85,
+		  0.51 0.81 0.95,
+		  0.77 0.8 0.82 ' skyAngle='0.9, 1.5, 1.57' groundColor='0.6 0.7 0.1,
+		  0.4 0.7 0.2,
+		  0.1 0.6 0.1,
+		  0 0.3 0.1 ' groundAngle='0.9, 1.5, 1.57'>
+                <!--Los colores del fondo pueden ser sólidos o degradados, en formato RGB de 8 bits cada color equivalentes a 256 tonalidades cada uno. En la notación de X3D, estos 256 valores se distribuyen en decimales entre 0 y 1: por ejemplo, 1/256 es 0.00390625. 
+       En este ejempoo, se usa una gradación de color. Se dividen en dos partes: color del cielo (skycolor) y color de la tierra (groundColor)-->
+            </Background>
+        </Scene>
+    </X3D>
+</body>
+
+</html>
