@@ -22,17 +22,9 @@
 				preset="custom"
 				url='usb3.patt'
 			>
-    <a-box depth="2" height="2" width="2" color='blue' position='0 1 0'  rotation="45 45 45" material='opacity: 0.5; side: double'>
-    	<a-animation attribute="rotation"
-               dur="10000"
-               direction="alternate"
-               fill="forwards"
-               to="0 360 0"
-               repeat="indefinite"></a-animation>
-     </a-box>
-	<a-torus-knot radius='0.35' radius-tubular='0.05' position="0 1 0">
-		<a-animation attribute="rotation" to="360 0 0" dur="6000" easing='linear' repeat="indefinite"></a-animation>
-	</a-torus-knot>
+    <a-box depth="2" height="2" width="2" color='blue' position='0 1 0' material='opacity: 0.5; side: double' animation="property: rotation; to: 0 360 0; loop:true; dur: 10000; easing: linear; repeat: indefinite"></a-box>
+
+	<a-torus-knot radius='0.35' radius-tubular='0.05' position="0 1 0" animation="property: rotation; to: 0 -360 0; loop: true; dur: 5000; easing: linear; repeat: indefinite"></a-torus-knot>
     
  <a-text position="0 3 0" 
    text="anchor:  align;  width:  6;  align:  center;  value:   UNIVERSIDAD SIMON BOLIVAR        www.cienciashumanasusb.mx;  font:  kelsonsans;  wrapCount:  30"></a-text>
