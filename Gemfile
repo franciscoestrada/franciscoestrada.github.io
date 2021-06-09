@@ -22,5 +22,4 @@ gem "minima"
 group :jekyll_plugins do
 #  gem "jekyll-github-metadata", "~> 1.0"
    gem 'jekyll-paginate'
-   gem "kramdown", ">= 2.3.1"
 end
