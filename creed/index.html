@@ -21,9 +21,7 @@
 
 <body>
     <a-scene>
-		<a-assets>
-			<a-asset-item id="casa" src="modelos3d/model.dae"></a-asset-item>
-			
+		<a-assets>	
 <!--        Modelo animado en Mixamo (https://www.mixamo.com) -->			
             <a-asset-item id="war" src="modelos3d/idle.glb"></a-asset-item>
 	    <a-asset-item id="casa" src="modelos3d/casa.glb"></a-asset-item>
@@ -34,7 +32,7 @@
 		 <a-light type="ambient" color="bbb" position="0 20 0 rotation="0 25 65"></a-light>
 		 <a-entity gltf-model="#war" scale="10 10 10" animation-mixer="clip: *;"></a-entity>		 
 		 <a-entity gltf-model="#casa"  scale="10 10 10" position="45 -0.8 10" rotation="0 90 0"></a-collada-model>
-
+<!--
 		 <a-entity
           id="camera"
           camera="fov: 80; zoom: 1;"
@@ -50,11 +48,13 @@
               "
           mouse-cursor="">
 		</a-entity>	
-
+-->	
 <!--La cámara requiere un objeto 3D al cual apuntar, un 'target'. Para que no apuntara a los pies del modelo, agregué una esfera, y la coloqué a la altura de la cara del personaje. 	-->		
-		<a-entity id="target" position="0 16 0">
+<!--		
+			 <a-entity id="target" position="0 16 0">
 			<a-sphere color="white" radius="0.01" position="0 16 0"></a-sphere>		
 		</a-entity>
+-->								       
     </a-scene>
 </body>
 </html>
