@@ -1,26 +1,54 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Realidad Aumentada</title>
-    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.1/dist/aframe-extras.min.js"></script>
-    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-</head>
+<!doctype html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    </head>
 
-<body style='margin : 0px; overflow: hidden;'>
-	<a-scene embedded artoolkit='sourceType: webcam;'>
-      <a-assets>
-		<a-asset-item id="casa" src="modelos3d/model.dae"></a-asset-item>
-        <a-asset-item id="war" src="modelos3d/idle.glb"></a-asset-item>
-      </a-assets>
+    <body style="margin: 0; overflow: hidden;">
+        <a-scene
+            vr-mode-ui="enabled: false;"
+            loading-screen="enabled: false;"
+            renderer="logarithmicDepthBuffer: true;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            id="scene"
+            embedded
+            gesture-detector
+        >
+            <a-assets>
+                <a-asset-item
+                    id="animated-asset"
+                    src="assets/asset.glb"
+                ></a-asset-item>
+            </a-assets>
 
-      <a-text value="Assassin's Creed" color="#BBB"
-          position="-0.5 0.5 1" scale="1 1 1"></a-text>
-      <a-collada-model src="#casa" scale="0.5 0.5 0.5" position="2.5 0 1" rotation="0 90 0"></a-collada-model>   
-      <a-entity gltf-model="#war" position="0.5 0.1 0.5" scale="0.5 0.5 0.5" animation-mixer="clip: *;"></a-entity> 
-        
-        <a-marker-camera preset='hiro'></a-marker-camera>
-	</a-scene>  
-</body>
+            <a-marker
+                type="pattern"
+                preset="hiro"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+			
+			<a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000">
+                <a-entity
+					rotation="0 90 -90"
+					position="0 0 0.5"
+                    scale="1 1 1"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+				
+			</a-entity>	
+            </a-marker>
+
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
 </html>
