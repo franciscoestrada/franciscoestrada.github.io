@@ -15,8 +15,9 @@
 	 <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 	 
 	<!--   Extensión para colocar en el escenario una cámara orbital. Para conocer más parámetros, consultar el sitio del programador.: 
-       https://github.com/tizzle/aframe-orbit-controls-component --> 
+       https://github.com/tizzle/aframe-orbit-controls-component 
     <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/v0.1.14/dist/aframe-orbit-controls-component.min.js"></script>
+	--> 
 </head>
 
 <body>
@@ -27,11 +28,12 @@
 	    <a-asset-item id="casa" src="modelos3d/casa.glb"></a-asset-item>
 		</a-assets>
 		
-<!-- Escenario procedimental 3D. Para info sobre parámetros, ir al sitio del programador -->		
+<!-- Escenario procedimental 3D. Para info sobre parámetros, ir al sitio del programador		
 		 <a-entity environment="preset: egypt; dressingAmount: 1; position: 250 0 0; dressingScale: 40; seed: 3;"></a-entity>
+ -->	    
 		 <a-light type="ambient" color="bbb" position="0 20 0 rotation="0 25 65"></a-light>
 		 <a-entity gltf-model="#war" scale="10 10 10" animation-mixer="clip: *;"></a-entity>		 
-		 <a-entity gltf-model="#casa"  scale="10 10 10" position="45 -0.8 10" rotation="0 90 0"></a-collada-model>
+		 <a-entity gltf-model="#casa"  scale="10 10 10" position="45 -0.8 10" rotation="0 90 0"></a-entity>
 <!--
 		 <a-entity
           id="camera"
