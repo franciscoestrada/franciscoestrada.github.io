@@ -5,14 +5,14 @@
   <title>Modelos 3D con animación en A-Frame</title>
 <!--    Biblioteca en JavaScript de realidad aumentada: 
         https://aframe.io -->
-    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 	
 <!--  Generación por procedimientos (procedimental en español o 'procedural', en inglés) de escenarios 3D. Para info sobre parámetros, ir al sitio del programador:    https://github.com/feiss/aframe-environment-component    -->	
-	 <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+	 <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
 	 
 <!-- Extensión que permite, entre otras cosas, reproducir animación en A_Frame: 
      https://github.com/donmccurdy/aframe-extras -->	 
-	 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.1/dist/aframe-extras.min.js"></script>
+	 <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 	 
 	<!--   Extensión para colocar en el escenario una cámara orbital. Para conocer más parámetros, consultar el sitio del programador.: 
        https://github.com/tizzle/aframe-orbit-controls-component --> 
@@ -26,14 +26,14 @@
 			
 <!--        Modelo animado en Mixamo (https://www.mixamo.com) -->			
             <a-asset-item id="war" src="modelos3d/idle.glb"></a-asset-item>
+	    <a-asset-item id="casa" src="modelos3d/casa.glb"></a-asset-item>
 		</a-assets>
 		
 <!-- Escenario procedimental 3D. Para info sobre parámetros, ir al sitio del programador -->		
 		 <a-entity environment="preset: egypt; dressingAmount: 1; position: 250 0 0; dressingScale: 40; seed: 3;"></a-entity>
 		 <a-light type="ambient" color="bbb" position="0 20 0 rotation="0 25 65"></a-light>
-		 <a-entity gltf-model="#war" scale="10 10 10" animation-mixer="clip: *;"></a-entity>
-		 
-		 <a-collada-model src="#casa"  scale="10 10 10" position="45 -0.8 10" rotation="0 90 0"></a-collada-model>
+		 <a-entity gltf-model="#war" scale="10 10 10" animation-mixer="clip: *;"></a-entity>		 
+		 <a-entity gltf-model="#casa"  scale="10 10 10" position="45 -0.8 10" rotation="0 90 0"></a-collada-model>
 
 		 <a-entity
           id="camera"
