@@ -100,7 +100,7 @@
 
 <p style="text-align:left"> </p>
 
-<p style="text-align:left"><a href="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html" target="_blank">https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html</a></p>
+<p style="text-align:left"><a href="https://ar-js-org.github.io/AR.js/three.js/examples/marker-training/examples/generator.html">https://ar-js-org.github.io/AR.js/three.js/examples/marker-training/examples/generator.html</a></p>
 </div></div></section><section data-id="34762652a16dfb13872973b8ce8fdd28">
 <div class="sl-block" data-block-type="text" style="width: 806px; left: 86px; top: 140px; height: auto;" data-block-id="065a8b1539e9aa2bfa33fd2507800b15"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
 <p style="text-align:left">Esta es la presentación del sitio, con una imagen de muestra de AR.js</p>
@@ -149,32 +149,59 @@
 <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 140px; height: auto;" data-block-id="0b7b91b60ef3f8da944ecd39327eb55b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui">
 <p style="text-align:left">El marcador personalizado se usa en una etiqueta A-Frame que hace referencia al tipo de cámara que se usará:</p>
 </div></div>
-<div class="sl-block" data-block-type="code" data-block-id="cd3d480a62792574ee49fa3a12877e68" style="min-width: 30px; min-height: 30px; width: 480px; height: 280px; left: 240px; top: 350px;"><div class="sl-block-content notranslate" style="z-index: 12; border-style: solid; border-width: 1px;"><pre><code>&lt;a-marker-camera
- type='pattern'
- url='imagen/F-marker.patt'&gt;
-&lt;/a-marker-camera&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="code" data-block-id="cd3d480a62792574ee49fa3a12877e68" style="min-width: 30px; min-height: 30px; width: 480px; height: 280px; left: 240px; top: 350px;"><div class="sl-block-content notranslate" style="z-index: 12; border-style: solid; border-width: 1px;"><pre><code>&lt;a-marker
+                type="pattern"
+                preset="custom"
+                url="assets/nefertiti.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            &gt;</code></pre></div></div>
 <div class="sl-block" data-block-type="text" data-block-id="287acb390bb9b557b9a50eb3078df6ac" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 80px; top: 70px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
 <h3 style="text-align: left;">3. usar el marcador</h3>
 </div></div></section><section data-id="e981f98a01491e80f80e0b5be301c715">
 <div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 70px; height: auto;" data-block-id="1d91f6f644a21a8ebfe6284325baea0e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
 <p style="text-align:left">Un ejemplo de uso:</p>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 800px; height: 364px; left: 80px; top: 210px;" data-block-id="6552306c1ad1afc96550d9294cdc7c1d"><div class="sl-block-content notranslate" style="z-index: 11; border-style: solid; border-width: 1px;"><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="es"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;title&gt;Marcador Personalizado&lt;/title&gt;
-  &lt;script src="https://aframe.io/releases/0.8.2/aframe.min.js"&gt;&lt;/script&gt;
-  &lt;script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"&gt;
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;a-scene embedded artoolkit='sourceType: webcam;'&gt;
-    &lt;a-box color='red' position='0 0.5 0' material='opacity: 0.5; side: double'&gt;
-    &lt;/a-box&gt;
-    &lt;a-marker-camera type='pattern' url='F_marker.patt'&gt;
-    &lt;/a-marker-camera&gt;
-  &lt;/a-scene&gt;
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 364px; left: 80px; top: 210px;" data-block-id="6552306c1ad1afc96550d9294cdc7c1d"><div class="sl-block-content notranslate" style="z-index: 11; border-style: solid; border-width: 1px;"><pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script src="https://aframe.io/releases/1.0.4/aframe.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"&gt;&lt;/script&gt;
+        &lt;script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"&gt;&lt;/script&gt;
+        &lt;script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"&gt;&lt;/script&gt;
+        &lt;script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+
+&lt;body style='margin : 0px; overflow: hidden; font-family: Monospace;'&gt;
+	&lt;a-scene 
+	embedded arjs='sourceType: webcam; 
+	detectionMode: mono_and_matrix; matrixCodeType: 3x3;' renderer='precision: medium;'
+	embedded 
+    gesture-detector
+	&gt;
+		
+		&lt;a-marker
+                type="pattern"
+                preset="custom"
+                url="assets/marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            &gt;
+                &lt;a-entity
+                    scale="0.9 0.9 0.9"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    class="clickable"
+                    gesture-handler
+                &gt;&lt;/a-entity&gt;
+            &lt;/a-marker&gt;
+			
+		&lt;a-entity camera&gt;&lt;/a-entity&gt;
+	&lt;/a-scene&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></div></div></section><section data-id="7e9ca9aa50e3e035cea16dd90b6cb920"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="990997bc49d96e0a746ed4ff7d1e886c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>vínculos útiles</h2>
