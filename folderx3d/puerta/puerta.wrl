@@ -1,0 +1,50 @@
+#VRML V2.0 utf8
+DEF abrePuerta Transform{children[
+Shape{
+geometry Cylinder{radius .01 height 1.9}
+appearance Appearance{material Material{}}
+}
+Transform{translation .7 0 0 rotation 1 0 0 1.5708 children[
+Shape{
+geometry Cylinder{radius .05 height 0.16}
+appearance Appearance{texture ImageTexture{url["texturas/metal.jpg"]}}
+}
+]}
+
+
+Transform{
+translation .4 0 0
+children[
+Shape {geometry Box{size .8 1.9 0.05}
+appearance Appearance{texture ImageTexture{url["texturas/madera.jpg"]}}
+}
+]}
+#Empieza la animación:
+# 1. Tiempo que durará la animación:
+
+DEF timer TimeSensor { 
+		cycleInterval 20.0 
+		loop FALSE
+		startTime -1
+	}   
+ 
+ DEF Toque TouchSensor {}
+ 
+ 
+# 2. Los fotogramas clave:
+	DEF giro OrientationInterpolator {
+		key [ 0, .25, 1 ] 
+		keyValue [ 0 1 0 0, 0 1 0 2, 0 1 0 0 ]
+	}
+]}
+
+#timer pasa fracciones de tiempo a giro
+ROUTE timer.fraction_changed TO giro.set_fraction 
+
+# gira el Transform llamado SSolar
+ROUTE giro.value_changed TO abrePuerta.set_rotation
+
+# Iniciar animación al tocar la puerta
+
+ROUTE Toque.touchTime TO timer.startTime
+

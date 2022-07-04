@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>X3D</title>
+    <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
+    <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        body{
+            background-color: black;
+        }
+        x3d{
+            margin: auto;
+            width: 90vw; 
+            height: 80vh;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">&#129145; Home</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="ejes-x-y-z.html">Coordenadas</a></li>
+            <li><a href="luna.html">Luna</a></li>
+            <li><a href="tierraluna.html">Tierra y Luna</a></li>
+            <li><a href="inline.html">Inline</a></li>
+            <li><a href="nave.html">NaveSW</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="ssolar.html">Sistema Solar</a></li>
+            <li><a href="casa.html">Casa</a></li>
+        </ul>
+    </nav>
+    <x3d>
+        <scene>
+            <transform translation="-3.5 3.5 0">
+                <inline url="ejes2.x3d"></inline>
+            </transform>
+
+
+<!-- Cubo rotando en eje X -->
+            <transform translation="3.5 3.5 0">
+                <inline url="ejes2.x3d"></inline>
+            </transform>
+
+<transform translation="3.5 3.5 0" DEF="EjeX">
+    <shape>
+        <appearance>
+            <material diffuseColor="red"></material>
+        </appearance>
+        <box size="0.6 0.6 0.6" />
+        </shape>
+<!-- Parámetros de animación: sensor de tiempo y cuál eje se animará -->
+				<timeSensor DEF='timerx' cycleInterval='10' loop='true'></timeSensor>
+				<orientationInterpolator DEF='rotatorx' key='0 0.5 1' keyValue='1 0 0 0 1 0 0 3.14 1 0 0 6.28'>
+				</orientationInterpolator>
+			</transform>
+			<!-- ROUTE canaliza el sensor de tiempo y la rotación al transform -->
+			<ROUTE fromNode='timerx' fromField='fraction_changed' toNode='rotatorx' toField='set_fraction'></ROUTE>
+			<ROUTE fromNode='rotatorx' fromField='value_changed' toNode='EjeX' toField='set_rotation'></ROUTE>
+
+
+<!-- Cubo rotando en eje Y -->
+<transform translation="-3.5 -3.5 0">
+    <inline url="ejes2.x3d"></inline>
+</transform>
+
+<transform translation="-3.5 -3.5 0" DEF="EjeY">
+    <shape>
+        <appearance>
+            <material diffuseColor="green"></material>
+        </appearance>
+        <box size="0.6 0.6 0.6" />
+        </shape>
+<!-- Parámetros de animación: sensor de tiempo y cuál eje se animará -->
+				<timeSensor DEF='timery' cycleInterval='10' loop='true'></timeSensor>
+				<orientationInterpolator DEF='rotatory' key='0 0.5 1' keyValue='0 1 0 0 0 1 0 3.14 0 1 0 6.28'>
+				</orientationInterpolator>
+			</transform>
+			<!-- ROUTE canaliza el sensor de tiempo y la rotación al transform -->
+			<ROUTE fromNode='timery' fromField='fraction_changed' toNode='rotatory' toField='set_fraction'></ROUTE>
+			<ROUTE fromNode='rotatory' fromField='value_changed' toNode='EjeY' toField='set_rotation'></ROUTE>
+
+<!-- Cubo rotando en eje Z -->
+<transform translation="3.5 -3.5 0">
+    <inline url="ejes2.x3d"></inline>
+</transform>
+<transform translation="3.5 -3.5 0" DEF="EjeZ">
+    <shape>
+        <appearance>
+            <material diffuseColor="blue"></material>
+        </appearance>
+        <box size="0.6 0.6 0.6" />
+        </shape>
+<!-- Parámetros de animación: sensor de tiempo y cuál eje se animará -->
+				<timeSensor DEF='timerz' cycleInterval='10' loop='true'></timeSensor>
+				<orientationInterpolator DEF='rotatorz' key='0 0.5 1' keyValue='0 0 1 0 0 0 1 3.14 0 0 1 6.28'>
+				</orientationInterpolator>
+			</transform>
+			<!-- ROUTE canaliza el sensor de tiempo y la rotación al transform -->
+			<ROUTE fromNode='timerz' fromField='fraction_changed' toNode='rotatorz' toField='set_fraction'></ROUTE>
+			<ROUTE fromNode='rotatorz' fromField='value_changed' toNode='EjeZ' toField='set_rotation'></ROUTE>
+
+<!-- Textos Rotación en Ejes X. Y y Z  -->
+<transform translation="-2.5 0 0">
+    <Shape>
+  <Appearance>
+   <Material ambientIntensity='0.200' shininess='0.200' diffuseColor='white'/>
+  </Appearance>
+  <Text string='Rotación en Ejes X, Y y Z'>
+   <FontStyle family='SANS' size='0.4'/>
+  </Text>
+ </Shape>
+ </transform>
+
+ <transform translation="4 3 0">
+    <Shape>
+  <Appearance>
+   <Material ambientIntensity='0.200' shininess='0.200' diffuseColor='white'/>
+  </Appearance>
+  <Text string='Rotación en X (1 0 0)'>
+   <FontStyle family='SANS' size='0.3'/>
+  </Text>
+ </Shape>
+ </transform>
+
+ <transform translation="-3 -4 0">
+    <Shape>
+  <Appearance>
+   <Material ambientIntensity='0.200' shininess='0.200' diffuseColor='white'/>
+  </Appearance>
+  <Text string='Rotación en Y (0 1 0)'>
+   <FontStyle family='SANS' size='0.3'/>
+  </Text>
+ </Shape>
+ </transform>
+
+ <transform translation="4 -4 0">
+    <Shape>
+  <Appearance>
+   <Material ambientIntensity='0.200' shininess='0.200' diffuseColor='white'/>
+  </Appearance>
+  <Text string='Rotación en Z (0 0 1)'>
+   <FontStyle family='SANS' size='0.3'/>
+  </Text>
+ </Shape>
+ </transform>
+        </scene>
+    </x3d>
+</body>
+
+</html>

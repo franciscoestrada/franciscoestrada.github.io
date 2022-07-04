@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>X3D</title>
+    <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
+    <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'>
+    <link rel="stylesheet" href="css/estilos.css">
+        <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">&#129145; Home</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="ejes-x-y-z.html">Coordenadas</a></li>
+            <li><a href="luna.html">Luna</a></li>
+            <li><a href="tierraluna.html">Tierra y Luna</a></li>
+            <li><a href="inline.html">Inline</a></li>
+            <li><a href="nave.html">NaveSW</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="ssolar.html">Sistema Solar</a></li>
+            <li><a href="casa.html">Casa</a></li>
+        </ul>
+    </nav>
+    <x3d style='margin: auto; background-color: gray; width: 90vw; height: 80vh;'>
+        <scene>
+            <shape>
+                <appearance>
+                    <MovieTexture url='texturas/video.mp4' loop="true"></MovieTexture>
+                </appearance>
+                <box size="3 2 0.01"> </box>
+            </shape>
+        </scene>
+    </x3d>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+	<x3d id="espacio">
+		<scene>
+			<transform DEF="TierraLuna">
+				<shape>
+					<appearance>
+						<material diffuseColor='1 1 0'></material>
+						<imageTexture url='texturas/tierra.jpg'></imageTexture>
+					</appearance>
+					<sphere />
+				</shape>
+
+				<transform translation="2 0 0" scale='0.2 0.2 0.2'>
+					<shape>
+						<appearance>
+							<material diffuseColor='1 1 0'></material>
+							<imageTexture url='texturas/luna.jpg'></imageTexture>
+						</appearance>
+						<sphere />
+					</shape>
+				</transform>
+				<!-- Parámetros de animación: sensor de tiempo y cuál eje se animará -->
+				<timeSensor DEF='timer' cycleInterval='10' loop='true'></timeSensor>
+				<orientationInterpolator DEF='rotator' key='0 0.5 1' keyValue='0 1 0 0 0 1 0 3.14 0 1 0 6.28'>
+				</orientationInterpolator>
+			</transform>
+			<!-- ROUTE canaliza el sensor de tiempo y la rotación al transform -->
+			<ROUTE fromNode='timer' fromField='fraction_changed' toNode='rotator' toField='set_fraction'></ROUTE>
+			<ROUTE fromNode='rotator' fromField='value_changed' toNode='TierraLuna' toField='set_rotation'></ROUTE>
+
+		</scene>
+	</x3d>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <Scene DEF='scene'>
+    <Transform DEF='Mercurio'>
+	<Transform translation='3 0 0'>
+      <Shape>
+        <Appearance>
+          <ImageTexture url='"texturas/cmercurio.jpg"'/>
+        </Appearance>
+        <Sphere radius='0.2'/>
+      </Shape>
+      <TimeSensor DEF='timercurio' cycleInterval='10' loop='true'/>
+      <OrientationInterpolator DEF='rotatormerc' key='0 0.5 1' keyValue='0 1 0 0 0 1 0 3.14 0 1 0 6.28'/>
+    </Transform>
+	</Transform>
+    <ROUTE fromNode='timercurio' fromField='fraction_changed' toNode='rotatormerc' toField='set_fraction'/>
+    <ROUTE fromNode='rotatormerc' fromField='value_changed' toNode='Mercurio' toField='set_rotation'/>
+  </Scene>
+</X3D>

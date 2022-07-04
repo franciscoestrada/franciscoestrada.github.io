@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Darth Vader X3D</title>
+    <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
+    <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'>
+    </link>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        body{
+            background-color: black;
+        }
+        x3d{
+            background-image: url('texturas/espacio.jpg');
+            margin: auto;
+            width: 90vw; 
+            height: 80vh;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">&#129145; Home</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="ejes-x-y-z.html">Coordenadas</a></li>
+            <li><a href="luna.html">Luna</a></li>
+            <li><a href="tierraluna.html">Tierra y Luna</a></li>
+            <li><a href="inline.html">Inline</a></li>
+            <li><a href="nave.html">NaveSW</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="ssolar.html">Sistema Solar</a></li>
+            <li><a href="casa.html">Casa</a></li>
+        </ul>
+    </nav>
+    <x3d>
+        <scene>
+            <!-- <inline url="ejes.x3d"></inline> -->
+            <shape>
+                <appearance>
+                    <material diffuseColor='1 1 0'></material>
+                    <imageTexture url="texturas/otroplaneta.jpg"></imageTexture>
+                </appearance>
+                <sphere />
+            </shape>
+            <transform DEF="VADER"  rotation="0 0 1 0.40145">
+                <transform translation="3.5 0 0" scale="0.2 0.2 0.2" rotation="0 0 1 0.40145">
+                    <inline url="star-wars-vader-tie-fighter.x3d"></inline>
+                </transform>
+                <timeSensor DEF='timer' cycleInterval='10' loop='true'></timeSensor>
+                <orientationInterpolator DEF='rotator' key='0 0.5 1' keyValue='0 1 0 0 0 1 0 3.14 0 1 0 6.28'>
+                </orientationInterpolator>
+              </transform>
+              <ROUTE fromNode='timer' fromField='fraction_changed' toNode='rotator' toField='set_fraction'></ROUTE>
+              <ROUTE fromNode='rotator' fromField='value_changed' toNode='VADER' toField='set_rotation'></ROUTE>
+        </scene>
+    </x3d>
+</body>
+
+</html>

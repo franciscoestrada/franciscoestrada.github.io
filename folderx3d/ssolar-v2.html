@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+  <title>Sistema Solar con X3D</title>
+  <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script>
+  <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+        <li><a href="../index.html">&#129145; Home</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="ejes-x-y-z.html">Coordenadas</a></li>
+        <li><a href="luna.html">Luna</a></li>
+        <li><a href="tierraluna.html">Tierra y Luna</a></li>
+        <li><a href="inline.html">Inline</a></li>
+        <li><a href="nave.html">NaveSW</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="ssolar.html">Sistema Solar</a>
+            <ul><li><a href="ssolar-v2.html">Versión 2</a></li></ul>
+        </li>
+        <li><a href="casa.html">Casa</a></li>
+    </ul>
+</nav>
+  <x3d class="espacio">
+    <scene>
+      <background backUrl='texturas/espacio.jpg' bottomUrl='texturas/espacio.jpg' frontUrl='texturas/espacio.jpg'
+        leftUrl='texturas/espacio.jpg' rightUrl='texturas/espacio.jpg' topUrl='texturas/espacio.jpg'></background>
+      <transform DEF='SSolar' rotation='1 0 1 -0.4'>
+        <shape>
+          <appearance>
+            <material diffuseColor='1 1 0'></material>
+            <imageTexture url='"texturas/csol.jpg"'></imageTexture>
+          </appearance>
+          <sphere></sphere>
+        </shape>
+
+        <!-- Mercurio animado -->
+        <transform DEF="Mercurio">
+        <transform scale='0.09 0.09 0.09'  translation='1.75 0 0'>
+          <inline url='"mercurio.x3d"'></inline>
+        </transform>  
+          <timeSensor DEF='timerMercurio' cycleInterval='10' loop='true'></timeSensor>         
+          <orientationInterpolator DEF='giraMercurio' key='0 0.5 1' keyValue='0 1 0 0 0 1 0 3.14 0 1 0 6.28'>
+        </orientationInterpolator>
+      </transform>
+      <ROUTE fromNode='timerMercurio' fromField='fraction_changed' toNode='giraMercurio' toField='set_fraction'></ROUTE>
+      <ROUTE fromNode='giraMercurio' fromField='value_changed' toNode='Mercurio' toField='set_rotation'></ROUTE>
+
+
+
+        <transform scale='0.15 0.15 0.15' translation='-2 0 -2'>
+          <inline url='"venus.x3d"'></inline>
+        </transform>
+        <transform scale='0.2 0.2 0.2' translation='3 0 3' rotation="0 0 1 0.523">
+          <inline url='"tierraluna.x3d"'></inline>
+          <transform translation="1 1 1" scale="0.2 0.2 0.2">
+            <inline url="star-wars-vader-tie-fighter.x3d"></inline>
+            </transform>
+        </transform>
+        <transform scale='0.15 0.15 0.15' translation='-5 0 0'>
+          <inline url='"marte.x3d"'></inline>
+        </transform>
+
+      <!-- <transform>
+        <shape>
+          <appearance>
+            <imageTexture url="texturas/asteroid-belt.png"></imageTexture>
+          </appearance>
+          <cylinder height="0.01" radius="7.5" />
+        </shape>
+      </transform> -->
+
+        <transform scale='0.6 0.6 0.6' translation='-7 0 -8'>
+          <inline url='"jupiter.x3d"'></inline>
+        </transform>
+        <transform scale='0.5 0.5 0.5' translation='-12 0 12'>
+          <anchor description='Info Saturno' url='"saturno.x3d"'>
+            <inline url='"saturno.x3d"'></inline>
+          </anchor>
+        </transform>
+        <transform scale='0.3 0.3 0.3' translation='11 0 12'>
+          <inline url='"urano.x3d"'></inline>
+        </transform>
+        <transform scale='0.15 0.15 0.15' translation='12 0 -12'>
+          <inline url='"neptuno.x3d"'></inline>
+        </transform>
+        <timeSensor DEF='timer' cycleInterval='60' loop='true'></timeSensor>
+        <orientationInterpolator DEF='rotator' key='0 0.5 1' keyValue='0 1 0 0 0 1 0 3.14 0 1 0 6.28'>
+        </orientationInterpolator>
+      </transform>
+      <ROUTE fromNode='timer' fromField='fraction_changed' toNode='rotator' toField='set_fraction'></ROUTE>
+      <ROUTE fromNode='rotator' fromField='value_changed' toNode='SSolar' toField='set_rotation'></ROUTE>
+    </scene>
+  </x3d>
+</body>
+
+</html>

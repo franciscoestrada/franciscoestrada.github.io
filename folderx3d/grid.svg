@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
+
+<!-- Inicio de retícula -->
+<defs>
+	<pattern id="gridPattern" width="10" height="10" patternUnits="userSpaceOnUse">
+		<path d="M10 0 L0 0 L0 10" style="fill:none;stroke:rgb(64,64,64);stroke-width:0.25"/>
+	</pattern>
+</defs>
+
+	<rect id="grid" width="600" height="600" x="0" y="0"
+		 style="stroke:rgb(128,128,128);stroke-width:0.25;fill:url(#gridPattern)"/>
+<!-- final de retícula -->
+
+</svg>

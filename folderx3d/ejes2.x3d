@@ -1,0 +1,99 @@
+<X3D>
+  <Scene>
+    <transform>
+		<Shape>	
+			<Appearance>
+				<material diffuseColor="0 1 0"></material>
+            </Appearance>
+			<cylinder radius="0.01"  height='6' />
+		</Shape>
+    </transform>
+
+    <transform rotation="0 0 1 1.5708">
+		<Shape>	
+			<Appearance>
+				<material diffuseColor="1 0 0"></material>
+            </Appearance>
+			<cylinder radius="0.01"  height='6' />
+		</Shape>
+    </transform>
+
+    <transform rotation="1 0 0 1.5708">
+		<Shape>	
+			<Appearance>
+				<material diffuseColor="0 0 1"></material>
+            </Appearance>
+			<cylinder radius="0.01"  height='6' />
+		</Shape>
+    </transform>
+
+<!-- X -->
+<transform translation="3.1 0 0">
+    <Shape>
+  <Appearance>
+   <Material ambientIntensity='0.200' shininess='0.200' diffuseColor='1 0 0'/>
+  </Appearance>
+  <Text string='x'>
+   <FontStyle family='SANS' size='0.2'/>
+  </Text>
+ </Shape>
+ </transform>
+<!-- -X  -->
+ <transform translation="-3.1 0 0">
+    <Shape>
+  <Appearance>
+   <Material ambientIntensity='0.200' shininess='0.200' diffuseColor='1 0 0'/>
+  </Appearance>
+  <Text string='-x'>
+   <FontStyle family='SANS' size='0.2'/>
+  </Text>
+ </Shape>
+ </transform>
+
+ <!-- Y -->
+<transform translation="0 3.15 0">
+    <Shape>
+  <Appearance>
+   <Material ambientIntensity='0.200' shininess='0.200' diffuseColor='0 1 0'/>
+  </Appearance>
+  <Text string='y'>
+   <FontStyle family='SANS' size='0.2'/>
+  </Text>
+ </Shape>
+ </transform>
+<!-- -Y  -->
+ <transform translation="0 -3.1 0">
+    <Shape>
+  <Appearance>
+   <Material ambientIntensity='0.200' shininess='0.200' diffuseColor='0 1 0'/>
+  </Appearance>
+  <Text string='-y'>
+   <FontStyle family='SANS' size='0.2'/>
+  </Text>
+ </Shape>
+ </transform>
+
+ <!-- Z -->
+<transform translation="0 0 3.1">
+    <Shape>
+  <Appearance>
+   <Material ambientIntensity='0.200' shininess='0.200' diffuseColor='0 0 1'/>
+  </Appearance>
+  <Text string='z'>
+   <FontStyle family='SANS' size='0.2'/>
+  </Text>
+ </Shape>
+ </transform>
+<!-- -X  -->
+ <transform translation="0 0 -3.1">
+    <Shape>
+  <Appearance>
+   <Material ambientIntensity='0.200' shininess='0.200' diffuseColor='0 0 1'/>
+  </Appearance>
+  <Text string='-z'>
+   <FontStyle family='SANS' size='0.2'/>
+  </Text>
+ </Shape>
+ </transform>
+  </Scene>
+</X3D>
