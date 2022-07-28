@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+  <title>Modelos 3D con animación en A-Frame</title>
+  
+<!--    Biblioteca en JavaScript de realidad aumentada: 
+        https://aframe.io -->
+     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+     
+<!--  Generación por procedimientos (procedimental en español o 'procedural', en inglés) de escenarios 3D. Para info sobre parámetros, ir al sitio del programador: 
+https://github.com/feiss/aframe-environment-component    -->
+	 <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+	 
+<!-- Extensión que permite, entre otras cosas, reproducir animación en A_Frame: 
+     https://github.com/n5ro/aframe-extras -->
+	 <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+	 
+<!--   Extensión para colocar en el escenario una cámara orbital. Para conocer más parámetros, consultar el sitio del programador.: 
+       https://github.com/supermedium/superframe/tree/master/components/orbit-controls -->
+   <script src="https://unpkg.com/aframe-orbit-controls@1.3.0/dist/aframe-orbit-controls.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+		<a-assets>	
+<!--        Modelo animado en Mixamo (https://www.mixamo.com) -->
+            <a-asset-item id="scy" src="modelos3d/samba.glb" loop="pingpong"></a-asset-item>
+		</a-assets>
+		
+<!-- Escenario procedimental 3D. -->
+		 <a-entity environment="preset: forest"></a-entity>	
+
+<a-entity gltf-model="#scy" animation-mixer="loop: pingpong"></a-entity>
+
+
+<!-- Cámara orbital	-->	
+		<a-entity camera 
+		look-controls 
+		orbit-controls=
+		"target: 0 1.6 -0.5; 
+		minDistance: 0.5; 
+		maxDistance: 180; 
+		initialPosition: 0 1.5 8"></a-entity>	
+			      
+    </a-scene>
+</body>
+</html>
