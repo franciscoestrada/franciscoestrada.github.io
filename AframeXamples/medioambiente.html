@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <title>Modelos 3D con animación en A-Frame</title>
+<!--    Biblioteca en JavaScript de realidad virtual: https://aframe.io -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	
+<!--  Generación por procedimientos (procedimental en español o 'procedural', en inglés) de escenarios 3D. Para info sobre parámetros, ir al sitio del programador:    https://github.com/feiss/aframe-environment-component    -->	
+<script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+	 
+<!-- Extensión que permite, entre otras cosas, reproducir animación en A_Frame: https://github.com/n5ro/aframe-extras -->	 
+     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+	 
+<!--   Extensión para colocar en el escenario una cámara orbital. Para conocer más parámetros, consultar el sitio del programador: 
+     https://github.com/supermedium/superframe/tree/master/components/orbit-controls/ --> 
+    <script src="https://unpkg.com/aframe-orbit-controls@1.3.0/dist/aframe-orbit-controls.min.js"></script>
+  
+</head>
+  <body>
+  <a-scene>
+  <a-box id="cube" position="-1 0.66921 -3" rotation="0 45 0" color="#4CC3D9" visible="true"></a-box>
+      <a-sphere id="sphere" position="0 1.44508 -5" radius="1.25" color="#EF2D5E" ></a-sphere>
+      <a-cylinder id="cylinder" position="1 0.8993 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-entity id="env" environment="preset: goaland"></a-entity>
+  </a-scene>
+
+</body>
+
+<script>
+  document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+	    var environment = ["egypt", "checkerboard", "forest", "goaland", "yavapai", "goldmine", "threetowers", "poison", "arches", "tron", "japan", "dream", "volcano", "starry", "osiris"]; 
+		var bool = [true, false]
+		var item = environment[Math.floor(Math.random() * environment.length)];
+		
+		document.getElementById('cube').setAttribute('visible', bool[Math.floor(Math.random() * bool.length)]);
+        document.getElementById('sphere').setAttribute('color', 'pink');
+		
+		var place = 'preset: '+item;
+		console.log(place);
+		document.getElementById('env').setAttribute('environment', place);
+		}
+	}	
+
+	  </script>
+</html>

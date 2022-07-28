@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<title>Augmented Reality</title>
+<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+<body>
+    <a-scene embedded arjs>
+            <a-assets>
+                <img id="piso" src="imagen/asphalt_6.jpg">
+                <img id="fachada" src="imagen/building_1.jpg">
+                <audio src="audio/break.mp3" id="break"  autoplay></audio>
+              </a-assets>        
+        <a-marker preset="hiro">           
+              <!-- Basic plane. -->
+              <a-plane src="#fachada" height="3" width="5" position="0 0 -1" rotation="-90 0 0" ></a-plane>
+            
+              <!-- Textured plane parallel to ground. -->
+              <a-plane src="#piso" height="3" width="5" position="0 1.5 0.5" rotation="-180 0 0" ></a-plane>
+            <a-entity 
+            position="-1 1 0.5" 
+            rotation="-90 0 0" 
+            scale="0.2 0.2 0.2" 
+            gltf-model="modelos3d/Au.glb" 
+            animation-mixer="clip: *; loop: pingpong;"></a-entity>
+
+            <script> 
+                var m = document.querySelector("a-marker")
+                m.addEventListener("markerFound", (e)=>{
+                console.log("found")
+                var v = document.querySelector('#break').play();
+             
+          
+          })
+                m.addEventListener("markerLost", (e)=>{
+                console.log("lost")
+                var v = document.querySelector('#break').pause();
+            
+          })
+          
+          
+          document.getElementById("btn1").addEventListener("click", (e)=>{
+          
+            var v = document.querySelector('#break').muted=false;
+          })
+          document.getElementById("btn2").addEventListener("click", (e)=>{
+          
+            var v = document.querySelector('#break').muted=true;
+          })
+          document.getElementById("btn3").addEventListener("click", (e)=>{
+          
+            var v = document.querySelector('#break').pause();
+          })
+          document.getElementById("btn4").addEventListener("click", (e)=>{
+          
+            var v = document.querySelector('#break').play();
+          })
+          
+          
+               </script>
+
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+    
+</body>
+
+</html>

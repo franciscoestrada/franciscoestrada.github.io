@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+ <!--  Generación por procedimientos (procedimental en español o 'procedural' en inglés) de escenarios 3D. Para info sobre parámetros, ir al sitio del programador:    https://github.com/feiss/aframe-environment-component    -->
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+   
+    <a-scene embedded arjs>
+
+<!-- Se agrega una luz      -->
+        <a-light type="ambient" color="bbb" position="0 20 0" rotation="0 25 65"></a-light>
+        <a-marker preset="hiro">
+<!-- Un plano  -->
+            <a-entity geometry="primitive: plane; height: 5; width: 10" material="side: double; color: green" rotation="-90 0 0" position="0 -0.5 -1"></a-entity>
+<!-- El modelo 3D -->
+            <a-entity position="-2 0 0" rotation="0 0 0" scale="0.5 0.5 0.5" gltf-model="modelos3d/dinosaurios.glb" animation-mixer="loop: repeat"></a-entity>
+
+        </a-marker>
+<!-- La cámara de realidad aumentada -->
+        <a-entity camera></a-entity>
+    </a-scene>
+</body></html>
