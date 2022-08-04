@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <body style="margin : 0px; overflow: hidden;">
+  <!-- Los modelos básicos o primitivas, aquí se les llama geometry, y pueden ser: box, circle, cone, cylinder, dodecahedron, octahedron, plane, ring, sphere, tetrahedron, torus, torusKnot y triangle  -->
+    <a-scene embedded arjs>
+    <a-assets>
+    <a-asset-item id='mariposa' src='modelos3d/mariposa.glb'></a-asset-item>
+    </a-assets>
+      <a-marker preset="hiro">
+       <a-entity gltf-model='#mariposa' position='0 0.5 0' rotation='-90 0 0' scale='0.3 0.3 0.3' ></a-entity>
+       <a-entity light="type: hemisphere; color: #fff; groundColor: #fff; intensity: 2"></a-entity>
+
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

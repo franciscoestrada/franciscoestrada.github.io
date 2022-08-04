@@ -1,0 +1,13 @@
+The ring geometry creates a flat ring, like a CD. Because the ring is flat, A-Frame will only render a single face of the ring unless we specify side: double the material component.
+
+<a-entity geometry="primitive: ring; radiusInner: 0.5; radiusOuter: 1"
+          material="side: double"></a-entity>
+
+
+Property	Description	Default Value
+radiusInner	Radius of the inner hole of the ring.	1
+radiusOuter	Radius of the outer edge of the ring.	1
+segmentsTheta	Number of segments. A higher number means the ring will be more round.	32
+segmentsPhi	Number of triangles within each face defined by segmentsTheta.	8
+thetaStart	Starting angle in degrees.	0
+thetaLength	Central angle in degrees.	360
