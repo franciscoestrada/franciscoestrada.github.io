@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    </head>
+
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+	<a-scene 
+	embedded arjs='sourceType: webcam; 
+	detectionMode: mono_and_matrix; matrixCodeType: 3x3;' renderer='precision: medium;'
+	embedded 
+    gesture-detector
+	>
+	
+	<a-assets>
+      <a-asset-item
+         id="animated-asset"
+         src="assets/asset.glb"
+      ></a-asset-item>
+	  <a-asset-item
+         id="animated-nefer"
+         src="assets/nefertiti.glb"
+      ></a-asset-item>
+    </a-assets>
+
+		<!-- hiro -->
+		<a-marker preset='hiro'>
+			<a-entity
+            position="0 1 0"
+            scale="0.3 0.3 0.3"
+            gltf-model="modelo3d/mariposa.glb"
+            ></a-entity>
+		</a-marker>
+
+		<!-- matrix: barcode 05 -->
+		<a-marker type='barcode' value='5'>
+			<a-entity
+            position="0 0 0"
+			rotation="-90 0 0" 
+            scale="0.3 0.3 0.3"
+			animation-mixer="loop: repeat"
+            gltf-model="modelo3d/axtro.glb"
+            ></a-entity>
+		</a-marker>
+
+		<!-- kanji -->
+		<a-marker preset='kanji'>
+			<a-entity
+            rotation="-90 0 0"
+            scale="3 3 3"
+            gltf-model="modelo3d/isla.glb"
+            ></a-entity>
+		</a-marker>
+		
+		<!--  Marcador F  -->
+		
+		<a-marker
+                type="pattern"
+                preset="custom"
+                url="assets/efe.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-entity
+                    scale="0.9417189483550997 0.9417189483550997 0.9417189483550997"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+			
+			<!--  Marcador Nefertiti  -->
+		
+		<a-marker
+                type="pattern"
+                preset="custom"
+                url="assets/nefertiti.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-entity
+                    scale="0.005 0.005 0.005"
+					rotation="-90 0 0"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-nefer"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+
+		<a-entity camera></a-entity>
+	</a-scene>
+</body>
+</html>
