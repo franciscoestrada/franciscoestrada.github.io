@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOnfografía Canon 60D</title>
+    <style>
+        h1{
+            font-family: sans-serif;
+            text-align: center;
+        }
+        p{
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Cámara Canon 60D</h1>
+<p>Pasa el cursor sobre la imagen para mostrar más información.</p>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1024px"
+    height="768px" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
+<g id="Capa_1">
+   
+       <image overflow="visible" width="760" height="713" xlink:href="imagen/canon.jpg"  transform="matrix(0.6928 0 0 0.6928 248.7178 137)">
+   </image>
+</g>
+<g id="botones">
+   <ellipse id="disparador_b" opacity="0.1" fill="#FFFFFF" cx="343" cy="259.5" rx="17" ry="14.5"/>
+   <ellipse id="lente_b" opacity="0.1" fill="#FFFFFF" cx="387.5" cy="480" rx="129.5" ry="143"/>  
+   <rect id="zapata_b" x="524.5" y="129.5" opacity="0.1" fill="#FFFFFF" stroke="none" stroke-miterlimit="10" width="108" height="36"/>
+</g>
+<g id="mensajes">
+   <g id="zapatilla_m" style="display: none;">
+       <path stroke="#FFFFFF" stroke-miterlimit="10" d="M817.5,6.5h-204c-6.627,0-12,5.373-12,12v71c0,6.627,5.373,12,12,12h10.161
+           L591,142l56.411-40.5H817.5c6.627,0,12-5.373,12-12v-71C829.5,11.873,824.127,6.5,817.5,6.5z"/>
+       <text transform="matrix(1 0 0 1 622 34)"><tspan x="0" y="0" fill="#FFFF00" font-family="'Arial-BoldMT'" font-size="21">Zapata</tspan><tspan x="0" y="25.2" fill="#FFFF00" font-family="'ArialMT'" font-size="21">Lugar para asegurar</tspan><tspan x="0" y="50.4" fill="#FFFF00" font-family="'ArialMT'" font-size="21">un flash.</tspan></text>
+   </g>
+   <g id="lenteja_m" style="display: none;">
+       <path stroke="#FFFFFF" stroke-miterlimit="10" d="M685.5,336.5h-204c-6.627,0-12,5.373-12,12v71c0,6.627,5.373,12,12,12h10.161
+           L459,472l56.411-40.5H685.5c6.627,0,12-5.373,12-12v-71C697.5,341.873,692.127,336.5,685.5,336.5z"/>
+       <text transform="matrix(1 0 0 1 490 364)"><tspan x="0" y="0" fill="#FFFF00" font-family="'Arial-BoldMT'" font-size="21">Lente Zoom</tspan><tspan x="0" y="25.2" fill="#FFFF00" font-family="'ArialMT'" font-size="21">24 a 102 mm, 1.4.</tspan></text>
+   </g>
+   <g id="disparador_m" style="display: none;">
+       <path stroke="#FFFFFF" stroke-miterlimit="10" d="M433.5,91.5h-204c-6.627,0-12,5.373-12,12v71c0,6.627,5.373,12,12,12h10.161
+           L326.25,245L279,186.5h154.5c6.627,0,12-5.373,12-12v-71C445.5,96.873,440.127,91.5,433.5,91.5z"/>
+       <text transform="matrix(1 0 0 1 228 119)"><tspan x="0" y="0" fill="#FFFF00" font-family="'Arial-BoldMT'" font-size="21">Disparador</tspan><tspan x="0" y="25.2" fill="#FFFF00" font-family="'ArialMT'" font-size="21">En el lugar adecuado</tspan><tspan x="0" y="50.4" fill="#FFFF00" font-family="'ArialMT'" font-size="21">para respuesta rápida.</tspan></text>
+   </g>
+</g>
+  <!-- Animación zapata -->
+  <animate 
+  xlink:href="#zapatilla_m"
+   fill="freeze" 
+   dur="0.2s" 
+   begin="zapata_b.mouseover"
+    attributeName="display"
+    from="none" 
+    to="block" 
+    />
+<animate 
+  xlink:href="#zapatilla_m"
+   fill="freeze" 
+   dur="0.5s" 
+   begin="zapata_b.mouseout"
+    attributeName="display"
+    from="block" 
+    to="none" 
+    />
+
+<!-- Animación lente -->
+<animate 
+xlink:href="#lenteja_m"
+ fill="freeze" 
+ dur="0.2s" 
+ begin="lente_b.mouseover"
+  attributeName="display"
+  from="none" 
+  to="block" 
+  />
+<animate 
+xlink:href="#lenteja_m"
+ fill="freeze" 
+ dur="0.5s" 
+ begin="lente_b.mouseout"
+  attributeName="display"
+  from="block" 
+  to="none" 
+  />
+
+<!-- Animación disparador -->
+<animate 
+xlink:href="#disparador_m"
+ fill="freeze" 
+ dur="0.2s" 
+ begin="disparador_b.mouseover"
+  attributeName="display"
+  from="none" 
+  to="block" 
+  />
+<animate 
+xlink:href="#disparador_m"
+ fill="freeze" 
+ dur="0.5s" 
+ begin="disparador_b.mouseout"
+  attributeName="display"
+  from="block" 
+  to="none" 
+  />
+
+</svg>
+ 
+</body>
+</html>
