@@ -1,0 +1,341 @@
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1280 1024" style="enable-background:new 0 0 1280 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.01;fill:#FFFFFF;}
+	.st1{opacity:0.05;fill:#FFFFFF;}
+	.st2{display:none;}
+	.st3{display:inline;}
+	.st4{display:inline;fill:#FFFFFF;}
+	.st5{font-family:'MyriadPro-Regular';}
+	.st6{font-size:12px;}
+	.st7{display:inline;fill:none;}
+	.st8{fill:#FFFFFF;}
+	.st9{font-size:10px;}
+	.st10{fill:none;}
+</style>
+<g id="Fondo">
+
+		<image style="overflow:visible;" width="2928" height="1647" xlink:href="planetas/sistema-solar.jpg"  transform="matrix(0.4368 0 0 0.4368 0 -1)">
+	</image>
+</g>
+<g id="Botones">
+	<circle id="b_mercurio" class="st0" cx="59" cy="656" r="5"/>
+	<circle id="b_venus" class="st1" cx="100" cy="649" r="12"/>
+	<circle id="b_tierra" class="st0" cx="147" cy="648" r="13"/>
+	<circle id="b_marte" class="st0" cx="195" cy="654" r="7"/>
+
+		<ellipse id="b_jupiter" transform="matrix(0.9998 -0.0199 0.0199 0.9998 -10.342 7.7912)" class="st0" cx="387.18" cy="524.69" rx="134.84" ry="132.66"/>
+	<circle id="b_saturno" class="st0" cx="753" cy="544" r="109"/>
+	<circle id="b_urano" class="st0" cx="951" cy="608" r="49"/>
+	<circle id="b_neptuno" class="st0" cx="1087" cy="610" r="47"/>
+	<circle id="b_pluton" class="st0" cx="1163" cy="656" r="3"/>
+</g>
+<g id="Mensaje">
+	<g id="mn_mercurio" class="st2">
+		<g class="st3">
+
+				<image style="overflow:visible;opacity:0.75;enable-background:new    ;" width="251" height="131" xlink:href="8B7AA730AA1F5284.png"  transform="matrix(1 0 0 1 8 412)">
+			</image>
+			<g>
+				<path d="M217,521H36c-11,0-20-9-20-20v-61c0-11,9-20,20-20h181c11,0,20,9,20,20v61C237,512,228,521,217,521z"/>
+			</g>
+		</g>
+
+			<image style="display:inline;overflow:visible;enable-background:new    ;" width="150" height="150" xlink:href="planetas/mercurio.png"  transform="matrix(0.5 0 0 0.5 37 430)">
+		</image>
+		<text transform="matrix(1 0 0 1 143 442)" class="st4 st5 st6">MERCURIO</text>
+		<rect x="124.74" y="451.74" class="st7" width="102.5" height="57.6"/>
+		<text transform="matrix(1 0 0 1 124.7407 458.8433)" class="st3"><tspan x="0" y="0" class="st8 st5 st9">Dios del comercio, hijo </tspan><tspan x="0" y="12" class="st8 st5 st9">de Júpiter y Maia </tspan><tspan x="0" y="24" class="st8 st5 st9">Maiestas, fertilidad.</tspan><tspan x="0" y="36" class="st8 st5 st9"> En la mitología griega, </tspan><tspan x="0" y="48" class="st8 st5 st9">representa a Hermes.</tspan></text>
+	</g>
+	<g id="mn_venus">
+		<g>
+
+				<image style="overflow:visible;opacity:0.75;enable-background:new    ;" width="251" height="131" xlink:href="8B7AA730AA1F528C.png"  transform="matrix(1 0 0 1 7 412)">
+			</image>
+			<g>
+				<path d="M216,521H35c-11,0-20-9-20-20v-61c0-11,9-20,20-20h181c11,0,20,9,20,20v61C236,512,227,521,216,521z"/>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 153 442)" class="st8 st5 st6">VENUS</text>
+
+			<image style="overflow:visible;enable-background:new    ;" width="320" height="240" xlink:href="planetas/venus.gif"  transform="matrix(0.3208 0 0 0.3208 22 430)">
+		</image>
+		<rect x="121.74" y="451.74" class="st10" width="102.5" height="57.6"/>
+		<text transform="matrix(1 0 0 1 121.7407 458.8433)"><tspan x="0" y="0" class="st8 st5 st9">Diosa del amor y </tspan><tspan x="0" y="12" class="st8 st5 st9">belleza. Protectora de </tspan><tspan x="0" y="24" class="st8 st5 st9">Julio César.</tspan><tspan x="0" y="36" class="st8 st5 st9">En la mitología griega, </tspan><tspan x="0" y="48" class="st8 st5 st9">representa a Afrodita.</tspan></text>
+	</g>
+	<g id="mn_gea">
+		<g>
+
+				<image style="overflow:visible;opacity:0.75;enable-background:new    ;" width="251" height="131" xlink:href="8B7AA730AA1F5284.png"  transform="matrix(1 0 0 1 7 412)">
+			</image>
+			<g>
+				<path d="M216,521H35c-11,0-20-9-20-20v-61c0-11,9-20,20-20h181c11,0,20,9,20,20v61C236,512,227,521,216,521z"/>
+			</g>
+		</g>
+
+			<image style="overflow:visible;" width="315" height="242" xlink:href="planetas/tierra.gif"  transform="matrix(0.314 0 0 0.314 24 432)">
+		</image>
+		<text transform="matrix(1 0 0 1 150 442)" class="st8 st5 st6">GEA</text>
+		<rect x="123.74" y="451.74" class="st10" width="102.5" height="57.6"/>
+		<text transform="matrix(1 0 0 1 123.7407 458.8433)"><tspan x="0" y="0" class="st8 st5 st9">Diosa y Madre Tierra.</tspan><tspan x="0" y="12" class="st8 st5 st9">Creadora del Universo, </tspan><tspan x="0" y="24" class="st8 st5 st9">los titanes y humanos. </tspan><tspan x="0" y="36" class="st8 st5 st9">En la mitología griega, </tspan><tspan x="0" y="48" class="st8 st5 st9">representa a la tierra.</tspan></text>
+	</g>
+	<g id="mn_marte">
+		<g>
+
+				<image style="overflow:visible;opacity:0.75;enable-background:new    ;" width="251" height="131" xlink:href="8B7AA730AA1F5284.png"  transform="matrix(1 0 0 1 7 412)">
+			</image>
+			<g>
+				<path d="M216,521H35c-11,0-20-9-20-20v-61c0-11,9-20,20-20h181c11,0,20,9,20,20v61C236,512,227,521,216,521z"/>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 150 442)" class="st8 st5 st6">MARTE</text>
+		<rect x="123.74" y="451.74" class="st10" width="102.5" height="57.6"/>
+		<text transform="matrix(1 0 0 1 123.7407 458.8433)"><tspan x="0" y="0" class="st8 st5 st9">Dios de la guerra.</tspan><tspan x="0" y="12" class="st8 st5 st9">Hijo de Júpiter.</tspan><tspan x="0" y="24" class="st8 st5 st9">En la mitología griega, </tspan><tspan x="0" y="36" class="st8 st5 st9">representa a Ares.</tspan></text>
+
+			<image style="overflow:visible;" width="704" height="716" xlink:href="planetas/marte.png"  transform="matrix(0.1065 0 0 0.1065 34.0087 432.1452)">
+		</image>
+	</g>
+	<g id="mn_jupiter">
+		<g>
+
+				<image style="overflow:visible;opacity:0.75;enable-background:new    ;" width="251" height="131" xlink:href="8B7AA730AA1F5284.png"  transform="matrix(1 0 0 1 268 180)">
+			</image>
+			<g>
+				<path d="M477,289H296c-11,0-20-9-20-20v-61c0-11,9-20,20-20h181c11,0,20,9,20,20v61C497,280,488,289,477,289z"/>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 407 210)" class="st8 st5 st6">JÚPITER</text>
+		<rect x="384.74" y="219.74" class="st10" width="102.5" height="57.6"/>
+		<text transform="matrix(1 0 0 1 384.7407 226.8433)"><tspan x="0" y="0" class="st8 st5 st9">Padre de los Dioses y de </tspan><tspan x="0" y="12" class="st8 st5 st9">los hombres.</tspan><tspan x="0" y="24" class="st8 st5 st9">Hijo de Saturno.</tspan><tspan x="0" y="36" class="st8 st5 st9">En la mitología griega, </tspan><tspan x="0" y="48" class="st8 st5 st9">representa a Zeus.</tspan></text>
+
+			<image style="overflow:visible;" width="120" height="122" xlink:href="planetas/jupiter.png"  transform="matrix(0.5878 0 0 0.5878 295.2295 202.2833)">
+		</image>
+	</g>
+	<g id="mn_saturno">
+		<g>
+
+				<image style="overflow:visible;opacity:0.75;enable-background:new    ;" width="251" height="131" xlink:href="8B7AA730AA1F5284.png"  transform="matrix(1 0 0 1 616 231)">
+			</image>
+			<g>
+				<path d="M825,340H644c-11,0-20-9-20-20v-61c0-11,9-20,20-20h181c11,0,20,9,20,20v61C845,331,836,340,825,340z"/>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 755 261)" class="st8 st5 st6">SATURNO</text>
+		<rect x="732.74" y="270.74" class="st10" width="102.5" height="57.6"/>
+		<text transform="matrix(1 0 0 1 732.7407 277.8433)"><tspan x="0" y="0" class="st8 st5 st9">Dios del Tiempo, </tspan><tspan x="0" y="12" class="st8 st5 st9">agricultura y cosecha.</tspan><tspan x="0" y="24" class="st8 st5 st9">Padre de Zeus.</tspan><tspan x="0" y="36" class="st8 st5 st9">En la mitología griega, </tspan><tspan x="0" y="48" class="st8 st5 st9">representa a Cronos.</tspan></text>
+
+			<image style="overflow:visible;" width="97" height="59" xlink:href="planetas/saturno.png"  transform="matrix(0.9588 0 0 0.9588 633 261)">
+		</image>
+	</g>
+	<g id="mn_urano">
+		<g>
+
+				<image style="overflow:visible;opacity:0.75;enable-background:new    ;" width="251" height="131" xlink:href="8B7AA730AA1F5284.png"  transform="matrix(1 0 0 1 829 346)">
+			</image>
+			<g>
+				<path d="M1038,455H857c-11,0-20-9-20-20v-61c0-11,9-20,20-20h181c11,0,20,9,20,20v61C1058,446,1049,455,1038,455z"/>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 968 376)" class="st8 st5 st6">CAELUS</text>
+		<rect x="945.74" y="385.74" class="st10" width="102.5" height="57.6"/>
+		<text transform="matrix(1 0 0 1 945.7407 392.8433)"><tspan x="0" y="0" class="st8 st5 st9">Titán del cielo.</tspan><tspan x="0" y="12" class="st8 st5 st9">Hijo de Gea.</tspan><tspan x="0" y="24" class="st8 st5 st9">En la mitología griega, </tspan><tspan x="0" y="36" class="st8 st5 st9">representa a Urano.</tspan></text>
+
+			<image style="overflow:visible;" width="80" height="104" xlink:href="planetas/urano.png"  transform="matrix(-1.446614e-16 -0.7875 0.7875 -1.446614e-16 850.5539 435.454)">
+		</image>
+	</g>
+	<g id="mn_neptuno">
+		<g>
+
+				<image style="overflow:visible;opacity:0.75;enable-background:new    ;" width="251" height="131" xlink:href="8B7AA730AA1F5284.png"  transform="matrix(1 0 0 1 965 346)">
+			</image>
+			<g>
+				<path d="M1174,455H993c-11,0-20-9-20-20v-61c0-11,9-20,20-20h181c11,0,20,9,20,20v61C1194,446,1185,455,1174,455z"/>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 1104 376)" class="st8 st5 st6">NEPTUNO</text>
+		<rect x="1080" y="385.74" class="st10" width="106.24" height="57.6"/>
+		<text transform="matrix(1 0 0 1 1080 392.8433)"><tspan x="0" y="0" class="st8 st5 st9">Dios de las aguas y mares</tspan><tspan x="0" y="12" class="st8 st5 st9">Hijo de Saturno.</tspan><tspan x="0" y="24" class="st8 st5 st9">En la mitología griega, </tspan><tspan x="0" y="36" class="st8 st5 st9">representa a Poseidón.</tspan></text>
+
+			<image style="overflow:visible;" width="50" height="50" xlink:href="planetas/neptuno.png"  transform="matrix(1.32 0 0 1.32 995 371)">
+		</image>
+	</g>
+</g>
+
+<!--La animación para mostrar el texto. -->
+		<animate
+    	xlink:href="#mn_mercurio"
+     fill="freeze"
+     dur="0.1s"
+     begin="b_mercurio.mouseover"
+	 		attributeName="display"
+     from="none"
+     to="block"
+      />
+<!-- Y la animación para ocultarlo cuando alejamos el cursor. -->
+ 		<animate
+    	xlink:href="#mn_mercurio"
+     fill="freeze"
+     dur="0.1s"
+     begin="b_mercurio.mouseout"
+	 		attributeName="display"
+     from="block"
+     to="none"
+     />
+
+
+		 <!--La animación para mostrar el texto. -->
+		 		<animate
+		     	xlink:href="#mn_venus"
+		      fill="freeze"
+		      dur="0.1s"
+		      begin="b_venus.mouseover"
+		 	 		attributeName="display"
+		      from="none"
+		      to="block"
+		       />
+		 <!-- Y la animación para ocultarlo cuando alejamos el cursor. -->
+		  		<animate
+		     	xlink:href="#mn_venus"
+		      fill="freeze"
+		      dur="0.1s"
+		      begin="b_venus.mouseout"
+		 	 		attributeName="display"
+		      from="block"
+		      to="none"
+		      />
+
+
+					<!--La animación para mostrar el texto. -->
+		 		 		<animate
+		 		     	xlink:href="#mn_gea"
+		 		      fill="freeze"
+		 		      dur="0.1s"
+		 		      begin="b_tierra.mouseover"
+		 		 	 		attributeName="display"
+		 		      from="none"
+		 		      to="block"
+		 		       />
+		 		 <!-- Y la animación para ocultarlo cuando alejamos el cursor. -->
+		 		  		<animate
+		 		     	xlink:href="#mn_gea"
+		 		      fill="freeze"
+		 		      dur="0.1s"
+		 		      begin="b_tierra.mouseout"
+		 		 	 		attributeName="display"
+		 		      from="block"
+		 		      to="none"
+		 		      />
+
+
+							<!--La animación para mostrar el texto. -->
+				 		 		<animate
+				 		     	xlink:href="#mn_marte"
+				 		      fill="freeze"
+				 		      dur="0.1s"
+				 		      begin="b_marte.mouseover"
+				 		 	 		attributeName="display"
+				 		      from="none"
+				 		      to="block"
+				 		       />
+				 		 <!-- Y la animación para ocultarlo cuando alejamos el cursor. -->
+				 		  		<animate
+				 		     	xlink:href="#mn_marte"
+				 		      fill="freeze"
+				 		      dur="0.1s"
+				 		      begin="b_marte.mouseout"
+				 		 	 		attributeName="display"
+				 		      from="block"
+				 		      to="none"
+				 		      />
+
+
+									<!--La animación para mostrar el texto. -->
+										<animate
+											xlink:href="#mn_jupiter"
+											fill="freeze"
+											dur="0.1s"
+											begin="b_jupiter.mouseover"
+											attributeName="display"
+											from="none"
+											to="block"
+											 />
+								 <!-- Y la animación para ocultarlo cuando alejamos el cursor. -->
+											<animate
+											xlink:href="#mn_jupiter"
+											fill="freeze"
+											dur="0.1s"
+											begin="b_jupiter.mouseout"
+											attributeName="display"
+											from="block"
+											to="none"
+											/>
+
+
+											<!--La animación para mostrar el texto. -->
+												<animate
+													xlink:href="#mn_saturno"
+													fill="freeze"
+													dur="0.1s"
+													begin="b_saturno.mouseover"
+													attributeName="display"
+													from="none"
+													to="block"
+													 />
+										 <!-- Y la animación para ocultarlo cuando alejamos el cursor. -->
+													<animate
+													xlink:href="#mn_saturno"
+													fill="freeze"
+													dur="0.1s"
+													begin="b_saturno.mouseout"
+													attributeName="display"
+													from="block"
+													to="none"
+													/>
+
+
+													<!--La animación para mostrar el texto. -->
+														<animate
+															xlink:href="#mn_urano"
+															fill="freeze"
+															dur="0.1s"
+															begin="b_urano.mouseover"
+															attributeName="display"
+															from="none"
+															to="block"
+															 />
+												 <!-- Y la animación para ocultarlo cuando alejamos el cursor. -->
+															<animate
+															xlink:href="#mn_urano"
+															fill="freeze"
+															dur="0.1s"
+															begin="b_urano.mouseout"
+															attributeName="display"
+															from="block"
+															to="none"
+															/>
+
+
+
+															<!--La animación para mostrar el texto. -->
+																<animate
+																	xlink:href="#mn_neptuno"
+																	fill="freeze"
+																	dur="0.1s"
+																	begin="b_neptuno.mouseover"
+																	attributeName="display"
+																	from="none"
+																	to="block"
+																	 />
+														 <!-- Y la animación para ocultarlo cuando alejamos el cursor. -->
+																	<animate
+																	xlink:href="#mn_neptuno"
+																	fill="freeze"
+																	dur="0.1s"
+																	begin="b_neptuno.mouseout"
+																	attributeName="display"
+																	from="block"
+																	to="none"
+																	/>
+
+</svg>
